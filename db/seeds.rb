@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+50.times do
+  user = User.new
+  user.email = Faker::Internet.free_email
+  user.password = Faker::Book.password
+  user.save
+20,times do
+  chirp = chirp.new
+  chirp.user = Faker::Lorem.sentence
+  chirp.body = Faker::Name.name
+  chirp.save
+end
+end
