@@ -6,14 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-50.times do
-  user = User.create!(
-  email: Faker::Internet.free_email,
-  password: Faker::Internet.password
-  )
-end
+# 50.times do
+#   user = User.create!(
+#   email: Faker::Internet.free_email,
+#   password: Faker::Internet.password
+#   )
+# end
 
-100.times do
+200.times do
   User.all.sample.posts << Post.create!(
     chirp:  Faker::Company.catch_phrase
     )
