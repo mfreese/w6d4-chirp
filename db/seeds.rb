@@ -7,14 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 50.times do
-  user = User.new
+  user = User.new(
   user.email = Faker::Internet.free_email
   user.password = Faker::Internet.password
   user.save
+  )
   20.times do
-    chirp = Chirp.new
-    chirp.user = Faker::Lorem.sentence
-    chirp.body = Faker::Name.name
-    chirp.save
+    post = Post.new(
+    post.user = Faker::Lorem.sentence
+    post.chirp = Faker::Name.name
+    post.save
+    )
   end
 end
