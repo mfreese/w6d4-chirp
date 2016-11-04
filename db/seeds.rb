@@ -12,7 +12,7 @@
   user.password = Faker::Internet.password
   user.save
   20.times do
-    chirp = chirp.new
+    chirp = Chirp.new
     chirp.user = Faker::Lorem.sentence
     chirp.body = Faker::Name.name
     chirp.save
