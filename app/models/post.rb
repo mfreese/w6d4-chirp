@@ -3,7 +3,6 @@ class Post < ApplicationRecord
   validates :chirp,
         length: {maximum: 170},
         presence: true,
-        uniqueness: true
 
         validates :chirp,
                 format: /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
