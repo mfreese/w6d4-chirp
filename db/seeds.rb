@@ -9,7 +9,7 @@
 50.times do
   user = User.new
   user.email = Faker::Internet.free_email
-  user.password = Faker::Book.password
+  user.password = Faker::Internet.password
   user.save
   20.times do
     chirp = chirp.new
