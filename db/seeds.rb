@@ -9,7 +9,7 @@
 50.times do
   user = User.create!(
   email: Faker::Internet.free_email,
-  password: = Faker::Internet.password
+  password: Faker::Internet.password
   )
 end
 
