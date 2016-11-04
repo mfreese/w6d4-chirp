@@ -11,10 +11,10 @@
   user.email = Faker::Internet.free_email
   user.password = Faker::Book.password
   user.save
-20,times do
-  chirp = chirp.new
-  chirp.user = Faker::Lorem.sentence
-  chirp.body = Faker::Name.name
-  chirp.save
-end
+  20.times do
+    chirp = chirp.new
+    chirp.user = Faker::Lorem.sentence
+    chirp.body = Faker::Name.name
+    chirp.save
+  end
 end
