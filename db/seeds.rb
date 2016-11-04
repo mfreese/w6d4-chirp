@@ -15,6 +15,6 @@ end
 
 100.times do
   User.all.sample.posts << Post.create!(
-    chirp:  Faker::Company.catch_phrase.
+    chirp:  Faker::Company.catch_phrase
     )
 end
