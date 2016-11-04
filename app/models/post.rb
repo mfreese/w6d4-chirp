@@ -4,8 +4,6 @@ class Post < ApplicationRecord
         length: {maximum: 170},
         presence: true,
 
-        validates :chirp,
-                format: /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
 
 
                   def self.timeline(user)
