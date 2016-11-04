@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
   validates :chirp,
-        length: {max_length: 170},
+        length: {maximum: 170},
         presence: true,
         uniqueness: true
 
