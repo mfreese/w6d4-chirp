@@ -14,8 +14,8 @@
   )
   20.times do
     post = Post.new(
-    post.user = Faker::Lorem.sentence
-    post.chirp = Faker::Name.name
+    post.user = User.all.sample
+    post.chirp = Faker::Lorem.sentence
     post.save
     )
   end
