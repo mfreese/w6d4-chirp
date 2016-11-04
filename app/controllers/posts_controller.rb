@@ -36,3 +36,4 @@ def post_params
   params.permit(:chirp, :name)
 
 end
+end
