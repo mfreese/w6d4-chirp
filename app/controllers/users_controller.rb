@@ -52,7 +52,10 @@ class UsersController < ApplicationController
     @followers = User.find(params[:id]).followers(User)
     render json: @followers
   end
-
+  def all_followees
+    @followees = User.find(params[:id]).followers(User)
+    render json: @followees
+  end
   private
 
   def user_params
