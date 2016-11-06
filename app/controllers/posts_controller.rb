@@ -12,13 +12,19 @@ end
 
 
 def create
-  post_params[:user] = current_user
-  @post = Post.new(post_params)
-    if @post.save
-      render json: @post
-    else
-      render json: @post.errors.full_messages, status: :unprocessable_entity
-    end
+  if current_user
+    @current_user.posts << Post.create(post_params)
+    render json: @current_user.posts.last
+  else
+     render json: @post.errors.full_messages, status: :unprocessable_entity
+   end
+  # post_params[:user] = current_user
+  # @post = Post.new(post_params)
+  #   if @post.save
+  #     render json: @post
+  #   else
+  #     render json: @post.errors.full_messages, status: :unprocessable_entity
+  #   end
 
 end
 
