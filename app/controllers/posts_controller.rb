@@ -5,7 +5,7 @@ def index
 if current_user
   @post = Post.timeline(current_user)
 else
-  @post = Post.all
+  @post = Post.all.order("created_at DESC")
 end
 render json: @post, scope: current_user, scope_name: :current_user
 end
