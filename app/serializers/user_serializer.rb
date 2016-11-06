@@ -9,7 +9,7 @@ class UserSerializer < ActiveModel::Serializer
 
   def following
     if current_user
-      object.followed_by?(current_user)
+      user.followed_by?(current_user)
     else
       false
     end
