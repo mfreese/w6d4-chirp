@@ -39,7 +39,7 @@ end
 private
 
 def post_params
-  params.permit(:chirp, :name, :avatar)
+  params.permit(:chirp, :name)
 
 end
 end
