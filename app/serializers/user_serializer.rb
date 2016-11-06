@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email, :avatar, :api_token, :name, :following
+  attributes :id, :email, :avatar, :api_token, :name, :following, :followers_count, :followees_count
 
   def avatar
     Refile.attachment_url(object, :avatar, :fit, 800, 800, format: "jpg")
@@ -11,5 +11,5 @@ class UserSerializer < ActiveModel::Serializer
     else
       false
     end
-  end      
+  end
 end
