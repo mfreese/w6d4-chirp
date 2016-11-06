@@ -40,12 +40,12 @@ class UsersController < ApplicationController
 
   def follow
     current_user.follow!(User.find(params[:id]))
-    render json: current_user
+    render json: @current_user
   end
 
   def unfollow
     current_user.unfollow!(User.find(params[:id]))
-    render json: current_user
+    render json: @current_user
   end
 
   def all_followers
