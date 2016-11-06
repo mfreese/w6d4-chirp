@@ -7,7 +7,7 @@ if current_user
 else
   @post = Post.all
 end
-render json: @post, :scope current_user, scope_name: :current_user
+render json: @post
 end
 
 
