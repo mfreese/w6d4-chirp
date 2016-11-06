@@ -13,6 +13,14 @@ class User < ApplicationRecord
             presence: true,
             uniqueness: true
 
+  validates :user_name,
+            presence: true,
+            uniqueness: true
+
+
+
+
+
   validates :email,
           format: /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
 end
