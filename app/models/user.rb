@@ -13,7 +13,7 @@ class User < ApplicationRecord
             presence: true,
             uniqueness: true
 
-  validates :name,
+  validates :user_name,
             presence: true,
             uniqueness: true
 
