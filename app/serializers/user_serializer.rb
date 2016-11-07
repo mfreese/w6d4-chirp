@@ -16,7 +16,7 @@ class UserSerializer < ActiveModel::Serializer
   end
 
   def name
-  user_name
+    object.user_name
   end
 
 end
