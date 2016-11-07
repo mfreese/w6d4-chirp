@@ -7,7 +7,7 @@ if current_user
 else
   @post = Post.all.order("created_at DESC")
 end
-render json: @post, scope: current_user, scope_name: :current_user
+# render json: @post, scope: current_user, scope_name: :current_user
 end
 
 
